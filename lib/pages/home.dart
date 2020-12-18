@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'dart:ui';
+import 'dart:core';
 import '../utils.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key key}) : super(key: key);
+  HomePage({Key key, String last_visit_str}) : super(key: key) {
+    if (last_visit_str != null)
+      this.last_visit = DateTime.parse(last_visit_str);
+    else
+      this.last_visit = DateTime(1990);
+  }
 
+  DateTime last_visit;
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -25,7 +32,26 @@ class _HomePageState extends State<HomePage> {
         body: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 0),
             child: Column(children: [
-              SizedBox(height: height / 6),
+              SizedBox(height: height / 10),
+              Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  child: Text.rich(TextSpan(
+                    children: <InlineSpan>[
+                      WidgetSpan(
+                          alignment: PlaceholderAlignment.middle,
+                          child: Text(
+                              widget.last_visit == null
+                                  ? "Last visit: \n A long time ago"
+                                  : " Last visit: \n ${widget.last_visit.day}.${widget.last_visit.month}.${widget.last_visit.year} \n  ${widget.last_visit.hour}:${widget.last_visit.minute}:${widget.last_visit.second}",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.normal,
+                                  fontFamily: "Lato",
+                                  color: hexToColor("#828282")))),
+                    ],
+                  ))),
               Center(
                   child: Container(
                       width: width,
