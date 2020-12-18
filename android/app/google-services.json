@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "469312020783",
+    "firebase_url": "https://flutter-course-3293a-default-rtdb.firebaseio.com",
+    "project_id": "flutter-course-3293a",
+    "storage_bucket": "flutter-course-3293a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469312020783:android:37e8a86aed1b3cfcef81da",
+        "android_client_info": {
+          "package_name": "com.example.test_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469312020783-k4vprpl5ktmschn2c60t5hgk1kabo4ud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBn4VuImHaNYYtjFx7cveo370CWBR0pcRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469312020783-k4vprpl5ktmschn2c60t5hgk1kabo4ud.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "469312020783-itokct78mmbjel6d1us5lshoppc6aklk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.testProject"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
